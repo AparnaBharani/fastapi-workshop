@@ -1,10 +1,6 @@
-# FastAPI Workshop 
+#  FastAPI Workshop
 
-A beginner-friendly FastAPI project designed for learning REST APIs through a **Patient Management System**.
-
----
-
-##  What You'll Learn
+#  What You'll Learn
 
 - Create a FastAPI application
 - Understand API Endpoints
@@ -13,15 +9,17 @@ A beginner-friendly FastAPI project designed for learning REST APIs through a **
 - Handle HTTP Exceptions
 - Use Pydantic Models
 - Perform CRUD Operations
+
 ---
 
-##  Project Structure
+#  Project Structure
 
 ```text
 fastapi-workshop/
 │
 ├── README.md
-├── requirements.txt
+├── pyproject.toml
+├── uv.lock
 ├── .gitignore
 ├── main.py
 └── patients.json
@@ -29,24 +27,48 @@ fastapi-workshop/
 
 ---
 
-##  Prerequisites
+#  Prerequisites
 
-- Python 3.10+
+- Python 3.10 or later
 - uv
 - VS Code
 - Git
 
 ---
 
-##  Clone the Repository
+#  Install uv
+
+### Windows (PowerShell)
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+### Linux / macOS
 
 ```bash
-git clone https://github.com/<your-username>/fastapi-workshop.git
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Verify the installation:
+
+```bash
+uv --version
 ```
 
 ---
 
-##  Create a Virtual Environment
+#  Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/fastapi-workshop.git
+
+cd fastapi-workshop
+```
+
+---
+
+#  Create a Virtual Environment
 
 ### Windows
 
@@ -58,29 +80,37 @@ uv venv
 ### Linux / macOS
 
 ```bash
-uv venv 
+uv venv
 source .venv/bin/activate
 ```
 
 ---
 
-##  Install Dependencies
+#  Install Dependencies
 
 ```bash
 uv sync
 ```
 
+This installs all the required packages listed in the project.
+
 ---
 
-##  Run the Application
+#  Run the Application
 
 ```bash
 uv run fastapi dev main.py
 ```
 
+Once the server starts, you should see something similar to:
+
+```text
+Uvicorn running on http://127.0.0.1:8000
+```
+
 ---
 
-##  Open in Browser
+#  Open in Your Browser
 
 ### Home
 
@@ -106,6 +136,7 @@ http://127.0.0.1:8000/redoc
 
 - Hello World Endpoint
 - About API Endpoints
+- Reading JSON Data
 - Path Parameters
 - HTTP Exceptions
 - Query Parameters
@@ -114,14 +145,12 @@ http://127.0.0.1:8000/redoc
 
 ---
 
-##  Tech Stack
+#  Tech Stack
 
 - Python
-- uv
 - FastAPI
 - Pydantic
-
----
+- uv
 
 ---
 
