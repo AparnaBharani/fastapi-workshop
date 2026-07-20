@@ -32,6 +32,7 @@ fastapi-workshop/
 ##  Prerequisites
 
 - Python 3.10+
+- uv
 - VS Code
 - Git
 
@@ -50,15 +51,15 @@ git clone https://github.com/<your-username>/fastapi-workshop.git
 ### Windows
 
 ```bash
-python -m venv myenv
-myenv\Scripts\activate
+uv venv
+.venv\Scripts\activate
 ```
 
 ### Linux / macOS
 
 ```bash
-python3 -m venv myenv
-source myenv/bin/activate
+uv venv 
+source .venv/bin/activate
 ```
 
 ---
@@ -66,7 +67,7 @@ source myenv/bin/activate
 ##  Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ---
@@ -74,7 +75,7 @@ pip install -r requirements.txt
 ##  Run the Application
 
 ```bash
-uvicorn main:app --reload
+uv run fastapi dev main.py
 ```
 
 ---
@@ -116,6 +117,7 @@ http://127.0.0.1:8000/redoc
 ##  Tech Stack
 
 - Python
+- uv
 - FastAPI
 - Pydantic
 
